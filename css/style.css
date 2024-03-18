@@ -15,14 +15,16 @@
             'buyNav'
             'pMn'
             'nav'
-        ;
-        background-color: white;
+        ; 
+        background-image: url(/img/export.png);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 @media screen and (min-width:768px){
     #wrapperIndex{
         display: grid;
-        height: 200vh;
+        height: 200vh;      
         width: 100vw;
         grid-template-columns: 20% 60% 20%;
         grid-template-rows: 15% 20% 65%;
@@ -31,13 +33,45 @@
             'imgAsL pMn imgAsR'
             'imgAs2L nav imgAs2R'
         ;
-        background-color: blue;
+        background-image: url(/img/export.png);
+        background-repeat: no-repeat;
+        background-position-x:center;
+        background-size: 60% 100%;
+        background-color: purple;
     }
+    #wrapperAbyss{
+        display: grid;
+        height: 500vh;      
+        width: 100vw;
+        grid-template-columns: 20% 60% 20%;
+        grid-template-rows: 15% 20% 65%;
+        grid-template-areas:
+            'layer1'
+            'layer2'
+            'layer3'
+            'layer4'
+            'theDepths'
+        ;
+        background-image: url(/img/Map_of_the_Abyss_Anime.png);
+        background-color: black;
+        background-repeat: no-repeat;
+        background-position-x:center;
+        background-size: 100% 80%;
+    }
+}
+.h2Delve{
+    color: #8C3781;
+    text-align: center;
+    font-family:'VCR OSD Mono';
+    font-size: 5rem;
 }
 
 
 .titleHeader{
     grid-area: h1Hd;
+    border-style: ridge;
+    border-color: #8C3781;
+    border-width: 0.4rem;
 }
 .buyNav{
     grid-area: buyNav;
@@ -45,32 +79,73 @@
 
     
     background-image: url('/img/dialogueBox.png');
-    background-size: 100% 150%;
+    background-size: 102% 250%;
     background-position: center;
     background-repeat: no-repeat;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .imageHeader{
     grid-area: imgHd;
+    object-position: center;
+
+    
+    background-image: url('/img/dialogueBox.png');
+    background-size: 102% 250%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .paragraphMain{
     grid-area: pMn;
     background-image: url('/img/dialogueBox.png');
-    background-size: 100% 230%;
-    background-position: 0;
+    background-size: 100% 220%;
+    background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
+
+    border-style: ridge;
+    border-color: #8C3781;
+    border-width: 0.4rem;
 }
 .imageAsideL{
     grid-area: imgAsL;
+    object-position: center;
+
+    
+    background-image: url('/img/dialogueBox.png');
+    background-size: 102% 250%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.imageAsidecR{
+.imageAsideR{
     grid-area: imgAsR;
+    object-position: center;
+
+    
+    background-image: url('/img/dialogueBox.png');
+    background-size: 102% 250%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .abyssNav{
@@ -79,12 +154,39 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-style: ridge;
+    border-color: #8C3781;
+    border-width: 0.4rem;
 }
 .imageAside2L{
     grid-area: imgAs2L;
+    object-position: center;
+
+    
+    background-image: url('/img/dialogueBox.png');
+    background-size: 102% 250%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .imageAside2R{
     grid-area: imgAs2R;
+    object-position: center;
+
+    
+    background-image: url('/img/dialogueBox.png');
+    background-size: 102% 250%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -92,10 +194,15 @@
 
 .h1Title{
     text-align: center;
-
-    font-size: 2.5rem;
+    color: purple;
+    font-family:'VCR OSD Mono';
+    font-size: 3rem;
+    text-shadow: black 2.5px 5px;
 }
 .anchorBuy{
+    color:#8C3781
+}
+.anchorGuide{
     color:#8C3781
 }
 .pDescription{
@@ -105,6 +212,20 @@
     padding: 40px;
     font-family:'VCR OSD Mono';
     font-size: 1.3rem;
+}
+.buttonAside{
+    width: 80%;
+    height: 30%;
+    margin: 5px;
+
+    background-image: url('/img/dialogueBox.png');
+    background-size: 103% 240%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .buttonAbyss{
     width: 80%;
@@ -119,9 +240,21 @@
     align-items: center;
     justify-content: center;
 }
-.h2Delve{
-    color: #8C3781;
-    text-align: center;
-    font-family:'VCR OSD Mono';
-    font-size: 5rem;
+
+
+
+.L1{
+    grid-area: layer1;
+}
+.L2{
+    grid-area: layer2;
+}
+.L3{
+    grid-area: layer3;
+}
+.L4{
+    grid-area: layer4;
+}
+.L5{
+    grid-area: theDepths;
 }
