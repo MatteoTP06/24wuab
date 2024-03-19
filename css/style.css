@@ -20,6 +20,49 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+
+    .anchorDelve{
+        display: none;
+    }
+    .mobileAnchorIndex{
+        text-decoration: none;
+        color:#8C3781;
+        font-family: 'VCR OSD Mono';
+        font-size: 200%;
+
+        width: 30%;
+        height: 20%;
+        margin: 5px;
+
+        background-image: url('/img/dialogueBox.png');
+        background-size: 103% 220%;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mobileAbyss{
+        text-decoration: none;
+        color:#ff3967;
+        font-family: 'VCR OSD Mono';
+        font-size: 150%;
+        text-align: center;
+    
+        width: 90%;
+        height: 20%;
+        margin: 5px;
+    
+        background-image: url('/img/dialogueBox.png');
+        background-size: 100% 220%;
+        background-position: center;
+        background-repeat: no-repeat;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 @media screen and (min-width:768px){
     #wrapperIndex{
@@ -29,7 +72,7 @@
         grid-template-columns: 20% 60% 20%;
         grid-template-rows: 15% 20% 65%;
         grid-template-areas:
-            'imgHd h1Hd buyNav'
+            'indexNavL h1Hd buyNav'
             'imgAsL pMn imgAsR'
             'imgAs2L nav imgAs2R'
         ;
@@ -58,7 +101,105 @@
         background-position-x:center;
         background-size: 100% 80%;
     }
+
+    .mobileAnchorIndex{
+        display: none;
+    }
+    .mobileAbyss{
+        display: none;
+    }
+    .anchorDelve{
+        text-decoration: none;
+        color:#8C3781;
+        font-family: 'VCR OSD Mono';
+        font-size: 200%;
+    
+        width: 50%;
+        height: 20%;
+        margin: 5px;
+    
+        background-image: url('/img/dialogueBox.png');
+        background-size: 90% 220%;
+        background-position: center;
+        background-repeat: no-repeat;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .anchorDelve:hover{
+        text-decoration: none;
+        color:#d140bd;
+        font-family: 'VCR OSD Mono';
+        font-size: 200%;
+    
+        width: 60%;
+        height: 30%;
+        margin: 5px;
+    
+        background-image: url('/img/dialogueBox.png');
+        background-size: 90% 220%;
+        background-position: center;
+        background-repeat: no-repeat;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
+
+/* GALLERY */
+#wrapperGallery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    background: black;
+}
+.buttonsGallery{
+    margin-top: 3%;
+}
+.buttonsGallery button{
+    background-image: url("/img/dialogueBox.png");
+    background-size: 104% 250%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color:#8C3781;
+    padding: 15px 45px;
+    font-family: 'VCR OSD Mono';
+    font-size: 18px;
+    color: #8C3781;
+}
+.currentImage{
+    max-width: 50vw;
+
+    border-style: ridge;
+    border-color: #8C3781;
+    border-width: 10px;
+
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+}
+.currentImage.fadeOut{
+    opacity: 0;
+}
+
+.homeButton{
+    background-image: url("/img/dialogueBox.png");
+    background-size: 104% 250%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color:#8c374b;
+    margin-top: 5px;
+    padding: 15px 60px;
+    font-family: 'VCR OSD Mono';
+    font-size: 18px;
+    color: #8c374b;
+}
+
+
 .h2Delve{
     color: #8C3781;
     text-align: center;
@@ -88,8 +229,8 @@
     align-items: center;
     justify-content: center;
 }
-.imageHeader{
-    grid-area: imgHd;
+.galNav{
+    grid-area: indexNavL;
     object-position: center;
 
     
@@ -117,6 +258,7 @@
     border-color: #8C3781;
     border-width: 0.4rem;
 }
+
 .imageAsideL{
     grid-area: imgAsL;
     object-position: center;
@@ -157,6 +299,11 @@
     border-style: ridge;
     border-color: #8C3781;
     border-width: 0.4rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .imageAside2L{
     grid-area: imgAs2L;
@@ -199,12 +346,7 @@
     font-size: 3rem;
     text-shadow: black 2.5px 5px;
 }
-.anchorBuy{
-    color:#8C3781
-}
-.anchorGuide{
-    color:#8C3781
-}
+
 .pDescription{
     text-align: left;
     color:#8C3781;
@@ -213,13 +355,19 @@
     font-family:'VCR OSD Mono';
     font-size: 1.3rem;
 }
-.buttonAside{
-    width: 80%;
-    height: 30%;
+
+.anchorIndex{
+    text-decoration: none;
+    color:#8C3781;
+    font-family: 'VCR OSD Mono';
+    font-size: 200%;
+
+    width: 96%;
+    height: 100%;
     margin: 5px;
 
     background-image: url('/img/dialogueBox.png');
-    background-size: 103% 240%;
+    background-size: 103% 220%;
     background-position: center;
     background-repeat: no-repeat;
 
@@ -227,12 +375,18 @@
     align-items: center;
     justify-content: center;
 }
-.buttonAbyss{
-    width: 80%;
-    height: 20%;
+.anchorIndex:hover{
+    text-decoration: none;
+    color:#d140bd;
+    font-family: 'VCR OSD Mono';
+    font-size: 200%;
+
+    width: 96%;
+    height: 100%;
+    margin: 5px;
 
     background-image: url('/img/dialogueBox.png');
-    background-size: 105% 230%;
+    background-size: 103% 220%;
     background-position: center;
     background-repeat: no-repeat;
 
@@ -240,8 +394,6 @@
     align-items: center;
     justify-content: center;
 }
-
-
 
 .L1{
     grid-area: layer1;
