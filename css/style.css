@@ -20,13 +20,45 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+    #wrapperGuide{
+        display: grid;
+        height: 300vh;      
+        width: 100vw;
+        grid-template-columns: 100%;
+        grid-template-rows: 30% 30% 30%;
+        grid-template-areas:
+            'gridParry'
+            'gridDodge'
+            'gridAttack'
+        ;
+        background-color: black;
+    }
 
     .anchorDelve{
         display: none;
     }
     .mobileAnchorIndex{
         text-decoration: none;
-        color:#8C3781;
+        color:#CE82C4;
+        font-family: 'VCR OSD Mono';
+        font-size: 200%;
+
+        width: 30%;
+        height: 20%;
+        margin: 5px;
+
+        background-image: url('/img/dialogueBox.png');
+        background-size: 103% 220%;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mobileAnchorIndex:hover{
+        text-decoration: none;
+        color:#d140bd;
         font-family: 'VCR OSD Mono';
         font-size: 200%;
 
@@ -47,12 +79,12 @@
         text-decoration: none;
         color:#ff3967;
         font-family: 'VCR OSD Mono';
-        font-size: 150%;
+        font-size: 115%;
         text-align: center;
     
-        width: 90%;
+        width: 70%;
+        padding: 5px;
         height: 20%;
-        margin: 5px;
     
         background-image: url('/img/dialogueBox.png');
         background-size: 100% 220%;
@@ -101,6 +133,20 @@
         background-position-x:center;
         background-size: 100% 80%;
     }
+    #wrapperGuide{
+        display: grid;
+        height: 100vh;      
+        width: 100vw;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100%;
+        grid-template-areas:
+            'gridParry gridDodge gridAttack'
+        ;
+
+        background-color: black;
+    }
+
+    
 
     .mobileAnchorIndex{
         display: none;
@@ -110,7 +156,7 @@
     }
     .anchorDelve{
         text-decoration: none;
-        color:#8C3781;
+        color:#CE82C4;
         font-family: 'VCR OSD Mono';
         font-size: 200%;
     
@@ -170,7 +216,7 @@
     padding: 15px 45px;
     font-family: 'VCR OSD Mono';
     font-size: 18px;
-    color: #8C3781;
+    color: #CE82C4;
 }
 .currentImage{
     max-width: 50vw;
@@ -186,22 +232,40 @@
     opacity: 0;
 }
 
+.currentCaption{
+    color: #CE82C4;
+    opacity: 1;
+}
+.currentCaption.fadeOut{
+    opacity: 0;
+}
+
 .homeButton{
-    background-image: url("/img/dialogueBox.png");
-    background-size: 104% 250%;
+    text-decoration: none;
+    color:#CE82C4;
+    font-family: 'VCR OSD Mono';
+    font-size: 200%;
+
+    width: 20%;
+    height: 20%;
+    margin: 5px;
+
+    background-image: url('/img/dialogueBox.png');
+    border-style: ridge;
+    border-color: #ff3967;
+    background-color: black;
+    background-size: 103% 230%;
     background-position: center;
     background-repeat: no-repeat;
-    border-color:#8c374b;
-    margin-top: 5px;
-    padding: 15px 60px;
-    font-family: 'VCR OSD Mono';
-    font-size: 18px;
-    color: #8c374b;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .h2Delve{
-    color: #8C3781;
+    color: #CE82C4;
     text-align: center;
     font-family:'VCR OSD Mono';
     font-size: 5rem;
@@ -341,7 +405,7 @@
 
 .h1Title{
     text-align: center;
-    color: purple;
+    color: #CE82C4;
     font-family:'VCR OSD Mono';
     font-size: 3rem;
     text-shadow: black 2.5px 5px;
@@ -349,7 +413,7 @@
 
 .pDescription{
     text-align: left;
-    color:#8C3781;
+    color:#CE82C4;
     padding-top: 40px;
     padding: 40px;
     font-family:'VCR OSD Mono';
@@ -358,7 +422,7 @@
 
 .anchorIndex{
     text-decoration: none;
-    color:#8C3781;
+    color:#CE82C4;
     font-family: 'VCR OSD Mono';
     font-size: 200%;
 
@@ -409,4 +473,63 @@
 }
 .L5{
     grid-area: theDepths;
+}
+
+/* GUIDE */
+/* .guideHeader{
+    grid-area: guideHd;
+    background-color: black;
+} */
+
+.guideParry{
+    grid-area: gridParry;
+    background-color: black;
+
+    border-style: ridge;
+    border-color: #8C3781;
+    border-width: 1rem;
+}
+.guideDodge{
+    grid-area: gridDodge;
+    background-color: black;
+
+    border-style: ridge;
+    border-color: #8C3781;
+    border-width: 1rem;
+}
+.guideAttack{
+    grid-area: gridAttack;
+    background-color: black;
+
+    border-style: ridge;
+    border-color: #8C3781;
+    border-width: 1rem;
+}
+
+.guideParagraph{
+    color: #CE82C4;
+    font-family: 'VCR OSD Mono';
+    margin: 10px;
+}
+.guideHomeButton{
+    text-decoration: none;
+    color:#CE82C4;
+    font-family: 'VCR OSD Mono';
+    font-size: 200%;
+
+    width: 20%;
+    height: 60%;
+    margin: 5px;
+
+    background-image: url('/img/dialogueBox.png');
+    border-style: ridge;
+    border-color: #ff3967;
+    background-color: black;
+    background-size: 103% 230%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
