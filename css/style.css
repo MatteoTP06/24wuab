@@ -1,9 +1,9 @@
 @font-face{
     font-family: "VCR OSD Mono";
-    src: url("/fonts/VCR_OSD_MONO_1.001.ttf");
+    src: url("/misc/VCR_OSD_MONO_1.001.ttf");
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:900px){
     #wrapperIndex{
         display: grid;
         height: 200vh;
@@ -16,16 +16,22 @@
             'pMn'
             'nav'
         ; 
-        background-image: url(/img/export.png);
+        background-image: url(/img/export.jpg);
+        background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+
+        
+    }
+    .galleryButtonDesktop{
+        display: none;
     }
     #wrapperGuide{
         display: grid;
         height: 300vh;      
         width: 100vw;
         grid-template-columns: 100%;
-        grid-template-rows: 30% 30% 30%;
+        grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas:
             'gridParry'
             'gridDodge'
@@ -39,9 +45,9 @@
     }
     .mobileAnchorIndex{
         text-decoration: none;
-        color:#CE82C4;
+        color:#FF8BEF;
         font-family: 'VCR OSD Mono';
-        font-size: 200%;
+        font-size: 150%;
 
         width: 30%;
         height: 20%;
@@ -79,11 +85,11 @@
         text-decoration: none;
         color:#ff3967;
         font-family: 'VCR OSD Mono';
-        font-size: 115%;
+        font-size: 150%;
         text-align: center;
     
         width: 70%;
-        padding: 5px;
+        padding: 10px;
         height: 20%;
     
         background-image: url('/img/dialogueBox.png');
@@ -95,8 +101,19 @@
         align-items: center;
         justify-content: center;
     }
+
+    .currentImage{
+        max-width: 90vw;
+    
+        border-style: ridge;
+        border-color: #8C3781;
+        border-width: 10px;
+    
+        transition: all 0.5s ease-in-out;
+        opacity: 1;
+    }
 }
-@media screen and (min-width:768px){
+@media screen and (min-width:900px){
     #wrapperIndex{
         display: grid;
         height: 200vh;      
@@ -108,7 +125,7 @@
             'imgAsL pMn imgAsR'
             'imgAs2L nav imgAs2R'
         ;
-        background-image: url(/img/export.png);
+        background-image: url(/img/export.jpg);
         background-repeat: no-repeat;
         background-position-x:center;
         background-size: 60% 100%;
@@ -116,10 +133,10 @@
     }
     #wrapperAbyss{
         display: grid;
-        height: 500vh;      
+        height: 1000vh;      
         width: 100vw;
-        grid-template-columns: 20% 60% 20%;
-        grid-template-rows: 15% 20% 65%;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
         grid-template-areas:
             'layer1'
             'layer2'
@@ -127,11 +144,6 @@
             'layer4'
             'theDepths'
         ;
-        background-image: url(/img/Map_of_the_Abyss_Anime.png);
-        background-color: black;
-        background-repeat: no-repeat;
-        background-position-x:center;
-        background-size: 100% 80%;
     }
     #wrapperGuide{
         display: grid;
@@ -145,6 +157,55 @@
 
         background-color: black;
     }
+    .currentImage{
+        max-width: 50vw;
+    
+        border-style: ridge;
+        border-color: #8C3781;
+        border-width: 10px;
+    
+        transition: all 0.5s ease-in-out;
+        opacity: 1;
+    }
+    .galleryButtonDesktop{
+        text-decoration: none;
+        color:#FF8BEF;
+        font-family: 'VCR OSD Mono';
+        font-size: 200%;
+    
+        width: 96%;
+        height: 100%;
+        margin: 5px;
+    
+        background-image: url('/img/dialogueBox.png');
+        background-size: 103% 220%;
+        background-position: center;
+        background-repeat: no-repeat;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .galleryButtonDesktop:hover{
+        text-decoration: none;
+        color:#d140bd;
+        font-family: 'VCR OSD Mono';
+        font-size: 200%;
+    
+        width: 96%;
+        height: 100%;
+        margin: 5px;
+    
+        background-image: url('/img/dialogueBox.png');
+        background-size: 103% 220%;
+        background-position: center;
+        background-repeat: no-repeat;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
 
     
 
@@ -156,7 +217,7 @@
     }
     .anchorDelve{
         text-decoration: none;
-        color:#CE82C4;
+        color:#FF8BEF;
         font-family: 'VCR OSD Mono';
         font-size: 200%;
     
@@ -179,8 +240,8 @@
         font-family: 'VCR OSD Mono';
         font-size: 200%;
     
-        width: 60%;
-        height: 30%;
+        width: 51%;
+        height: 21%;
         margin: 5px;
     
         background-image: url('/img/dialogueBox.png');
@@ -194,78 +255,9 @@
     }
 }
 
-/* GALLERY */
-#wrapperGallery{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    flex-direction: column;
-    background: black;
-}
-.buttonsGallery{
-    margin-top: 3%;
-}
-.buttonsGallery button{
-    background-image: url("/img/dialogueBox.png");
-    background-size: 104% 250%;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-color:#8C3781;
-    padding: 15px 45px;
-    font-family: 'VCR OSD Mono';
-    font-size: 18px;
-    color: #CE82C4;
-}
-.currentImage{
-    max-width: 50vw;
-
-    border-style: ridge;
-    border-color: #8C3781;
-    border-width: 10px;
-
-    transition: all 0.5s ease-in-out;
-    opacity: 1;
-}
-.currentImage.fadeOut{
-    opacity: 0;
-}
-
-.currentCaption{
-    color: #CE82C4;
-    opacity: 1;
-}
-.currentCaption.fadeOut{
-    opacity: 0;
-}
-
-.homeButton{
-    text-decoration: none;
-    color:#CE82C4;
-    font-family: 'VCR OSD Mono';
-    font-size: 200%;
-
-    width: 20%;
-    height: 20%;
-    margin: 5px;
-
-    background-image: url('/img/dialogueBox.png');
-    border-style: ridge;
-    border-color: #ff3967;
-    background-color: black;
-    background-size: 103% 230%;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 
 .h2Delve{
-    color: #CE82C4;
+    color: #FF8BEF;
     text-align: center;
     font-family:'VCR OSD Mono';
     font-size: 5rem;
@@ -405,7 +397,7 @@
 
 .h1Title{
     text-align: center;
-    color: #CE82C4;
+    color: #cf00b4;
     font-family:'VCR OSD Mono';
     font-size: 3rem;
     text-shadow: black 2.5px 5px;
@@ -413,16 +405,16 @@
 
 .pDescription{
     text-align: left;
-    color:#CE82C4;
+    color:#FF8BEF;
     padding-top: 40px;
-    padding: 40px;
+    padding: 30px;
     font-family:'VCR OSD Mono';
-    font-size: 1.3rem;
+    font-size: 125%;
 }
 
 .anchorIndex{
     text-decoration: none;
-    color:#CE82C4;
+    color:#FF8BEF;
     font-family: 'VCR OSD Mono';
     font-size: 200%;
 
@@ -459,27 +451,137 @@
     justify-content: center;
 }
 
+/* ABYSS */
 .L1{
     grid-area: layer1;
+
+    background-image: url(/img/layerOne.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
 }
 .L2{
     grid-area: layer2;
+
+    background-color: #2ea2d4;
+
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
 }
 .L3{
     grid-area: layer3;
+
+    background-color: #6d007b;
+
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
 }
 .L4{
     grid-area: layer4;
+
+    background-color: #d4b82e;
+
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
 }
 .L5{
     grid-area: theDepths;
+
+    background-color: black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.layerHeading{
+    font-family: 'VCR OSD Mono';
+    text-align: center;
+
+    color:#d140bd;
+
+    font-size: 3rem;
+    text-shadow: black 2.5px 5px;
+}
+.layerDescription{
+    font-family: 'VCR OSD Mono';
+
+    color:#FF8BEF;
+    text-shadow: black 1px 3px 3px;
+    font-size: 1.3rem;
+    margin: 2.5rem;
+}
+
+.depthsHeading{
+    font-family: 'VCR OSD Mono';
+    color: #811e35;
+
+    
+}
+.depthsDescription{
+    color: #811e35;
+    font-family: 'VCR OSD Mono';
+
+    text-shadow: black 1px 3px 3px;
+    font-size: 1.3rem;
+    margin: 2.5rem;
+}
+
+.layerDescriptionBox{
+    background-image: url('/img/dialogueBox.png');
+    background-size: 100% 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 20%;
+    
+    margin-right: 2rem;
+    width: 70%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.layerDescriptionBox:hover{
+    opacity: 100%;
+}
+
+.abyssHomeButton{
+    text-decoration: none;
+    color:#FF8BEF;
+    font-family: 'VCR OSD Mono';
+    font-size: 200%;
+
+    width: 20%;
+    max-height: 10vh;
+    height: 20%;
+    margin: 5px;
+
+    background-image: url('/img/dialogueBox.png');
+    border-style: ridge;
+    border-color: #1c0007;
+    background-color: rgb(255, 0, 0);
+    background-size: 103% 230%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    text-align: center;
+    font-size: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* GUIDE */
-/* .guideHeader{
-    grid-area: guideHd;
-    background-color: black;
-} */
 
 .guideParry{
     grid-area: gridParry;
@@ -507,18 +609,94 @@
 }
 
 .guideParagraph{
-    color: #CE82C4;
+    color: #FF8BEF;
     font-family: 'VCR OSD Mono';
     margin: 10px;
 }
+.guideImage{
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    image-rendering: pixelated;
+    margin-right: auto;
+}
 .guideHomeButton{
     text-decoration: none;
-    color:#CE82C4;
+    color:#FF8BEF;
     font-family: 'VCR OSD Mono';
     font-size: 200%;
 
     width: 20%;
-    height: 60%;
+    height: 10%;
+    margin-top: 31rem;
+    position: absolute;
+
+    background-image: url('/img/dialogueBox.png');
+    border-style: ridge;
+    border-color: #ff3967;
+    background-color: black;
+    background-size: 103% 230%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* GALLERY */
+#wrapperGallery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    border-style: ridge;
+    border-width: 10px;
+    border-color: #8C3781;
+    flex-direction: column;
+    background: #201C1C;
+}
+
+.buttonsGallery{
+    margin-top: 3%;
+}
+.buttonsGallery button{
+    background-image: url("/img/dialogueBox.png");
+    background-size: 104% 250%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color:#8C3781;
+    padding: 15px 45px;
+    font-family: 'VCR OSD Mono';
+    font-size: 18px;
+    color: #FF8BEF;
+}
+
+
+.currentImage.changeImage{
+    transform: scale(0.5, 0.5);
+    opacity: 0;
+}
+
+.currentCaption{
+    font-family: 'VCR OSD Mono';
+    color: #FF8BEF;
+    opacity: 1;
+}
+.currentCaption.changeImage{
+    opacity: 0.5;
+}
+
+.homeButton{
+    text-decoration: none;
+    color:#FF8BEF;
+    font-family: 'VCR OSD Mono';
+    font-size: 200%;
+
+    width: 20%;
+    max-height: 10vh;
+    height: 20%;
     margin: 5px;
 
     background-image: url('/img/dialogueBox.png');
